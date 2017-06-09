@@ -1,17 +1,27 @@
 <html>
   <head>
       <link rel="stylesheet" href="assets/style/styles.css">
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
    </head>
    <body>
      <div class="login">
        <img class="logo" src="assets/images/logo.png" alt="Hive-Up">
 
        <form action="">
-         <div>
-           <input type="text" placeholder="Username">
+         <div class="login-email">
+           <i class="material-icons">mail_outline</i>
+           <input type="email" placeholder="Email">
          </div>
-         <div>
-           <input type="text" placeholder="Password">
+         <div class="login-password">
+           <i class="material-icons">lock_outline</i>
+           <input type="password" placeholder="Password">
+         </div>
+         <div class="login-remember">
+           <input type="checkbox" name="remember" value="yes">Remember Me<br>
+         </div>
+         <div class="login-forget-password">
+           <a href="">Forget Password?</a>
          </div>
          <button>Login</button>
        </form>
