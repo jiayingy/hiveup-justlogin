@@ -127,7 +127,7 @@ body {
 }
 
 .dashboard-nav .home,
-.dashboard-nav .notif,
+.dashboard-nav .user,
 .dashboard-nav .faq {
   height: 100%;
   width: 60px;
@@ -139,18 +139,55 @@ body {
   background-color: #F38820;
 }
 
-.dashboard-nav .notif {
+.dashboard-nav .user {
   background-color: #FF9C3B;
+  position: relative;
+  display: inline-block;
+}
+
+.dashboard-nav .user__dropdown {
+  position: absolute;
+  z-index: 999;
+  background-color: #f9f9f9;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  top: 60px;
+  left: -50px;
+  display: none;
+}
+
+.dashboard-nav .user:hover .user__dropdown {
+  display: block;
+}
+
+.dashboard-nav .user__dropdown ul {
+  padding: 0;
+  margin: 0;
+  width: 150px;
+}
+
+.dashboard-nav .user__dropdown ul li {
+  list-style: none;
+  padding: 15px;
+  color: grey;
+}
+
+.dashboard-nav .user__dropdown ul li:hover {
+  background-color: #eeeeee;
+  text-decoration: none;
+}
+
+.dashboard-nav .user__dropdown ul a:hover {
+  text-decoration: none;
 }
 
 .dashboard-nav .faq {
   background-color: #A65B10;
 }
 
-.dashboard-nav .home .glyphicon,
-.dashboard-nav .notif .glyphicon,
-.dashboard-nav .faq .glyphicon {
-  font-size: 23px;
+.dashboard-nav .home .material-icons,
+.dashboard-nav .user .material-icons,
+.dashboard-nav .faq .material-icons {
+  font-size: 25px;
   vertical-align: middle;
   padding: 16px 0;
   text-align: center;
@@ -166,12 +203,12 @@ body {
   margin-right: auto;
 }
 .dashboard-search input {
-  padding: 12px;
+  padding: 15px;
   width: 100%;
-  background-color: #eeeeee;
-  border: 1px solid #eeeeee;
+  background-color:rgba(0,0,0,0.06);
+  border: 0;
   text-indent: 40px;
-  box-shadow: inset 1px 2px 2px 0px rgba(0,0,0,0.125);
+  border-radius: 5px;
 }
 
 .dashboard-search input::placeholder {
@@ -185,8 +222,8 @@ body {
 .dashboard-search .glyphicon{
   position: absolute;
   z-index: 999;
-  padding: 15px;
-  color: #cccccc;
+  padding: 19px;
+  color: #aaaaaa;
 }
 
 @media screen and (min-width: 480px) {
@@ -197,6 +234,49 @@ body {
 
 @media screen and (min-width: 768px) {
   .dashboard-search {
-    width: 550px;
+    width: 600px;
   }
+}
+
+.wrapper {
+  max-width: 994px;
+  margin: 0 auto;
+}
+
+.table {
+  width: 100%;
+  text-align: left;
+  margin-top: 50px;
+  table-layout: fixed;
+}
+
+.table thead tr th {
+  font-family: Avenir;
+  text-transform: capitalize;
+  color: #F38820;
+  border-bottom: 2px solid #F38820;
+  padding: 18px;
+}
+
+.table tbody {
+  overflow-y: auto;
+  height: 100px;
+}
+
+.table tbody tr td {
+  padding: 18px;
+}
+
+.table__item__name {
+  width: 40%;
+}
+.table__item__policy,
+.table__item__expire {
+  width: 30%;
+  word-wrap: break-word;
+}
+
+.table__row:hover {
+  background-color: #fff7ef;
+  cursor: pointer;
 }
